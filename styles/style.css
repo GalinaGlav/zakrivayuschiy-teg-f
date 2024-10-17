@@ -177,6 +177,9 @@
 
 .image-wrapper {
   position: relative;
+  border: 2px solid var(--accent-color, #000);
+  inline-size: 375px;
+  block-size: 375px;
 }
 
 .card-image {
@@ -211,8 +214,9 @@
 }
 
 .card-content {
-  padding-inline: 25px;
-  padding-block: 23px;
+  padding-inline-start: 25px;
+  padding-inline-end: 28.95px;
+  padding-block: 25px;
   display: flex;
   flex-direction: column;
   gap: 27px;
@@ -222,8 +226,8 @@
 .button-group {
   display: flex;
   justify-content: end;
-  padding: 0 25px 25px;
-  block-size: 100%;
+  margin: 0 25px 25px;
+  max-block-size: 38px;
 }
 
 .card-button {
@@ -233,6 +237,7 @@
   font-family: var(--accent-font-family);
   text-align: center;
   position: relative;
+  line-height: 90%;
 }
 
 .card-button:focus {
