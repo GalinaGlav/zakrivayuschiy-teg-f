@@ -53,13 +53,14 @@
 .header-group {
   display: flex;
   flex-direction: column;
-  gap:20px;
+  gap: 20px;
   align-items: center;
   text-transform: uppercase;
   padding-block-start: clamp(7.5rem, 1.502vw + 7.148rem, 8.5rem);
   padding-inline: clamp(0.875rem, 9.953vw - 1.458rem, 7.5rem);
 
 }
+
 .header-logo {
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   font-weight: var(--font-weight-title, 700);
@@ -104,34 +105,35 @@
 
 @keyframes disabled {
   from {
-    translate:0;
+    translate: 0;
   }
+
   to {
     translate: 4px;
   }
 }
 
 .theme-menu__button:hover {
- cursor: pointer;
- opacity: 0.6;
- transition: opacity 0.3s ease;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
 }
 
-.theme-menu__button:focus-visible  {
+.theme-menu__button:focus-visible {
   cursor: pointer;
- }
+}
 
 .theme-menu__button:focus {
   outline: none;
   opacity: 0.6;
- }
+}
 
 .theme-menu__button::after {
   content: "";
   position: absolute;
   inset-inline-start: 0;
   inset-block-end: -5px;
-  border-block-end: 2px solid var(--accent-color,#000);
+  border-block-end: 2px solid var(--accent-color, #000);
   transform: scaleX(0);
   inline-size: 100%;
   transform-origin: left;
@@ -151,21 +153,21 @@
 }
 
 .content-card-list {
- background-color: var(--bg-color,#fff);
- display: flex;
- flex-direction: column;
- gap: 50px;
- justify-content: center;
- align-items: center;
+  background-color: var(--bg-color, #fff);
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
 }
 
 .card-title {
   font-size: 18px;
   font-weight: var(--font-weight-title, 700);
-  padding: 4px 10px 6px 10px;
+  padding: 4px 10px;
 }
 
-@media (width >= 768px) {
+@media (width >=768px) {
   .card-title {
     padding: 3px 10px;
   }
@@ -177,8 +179,8 @@
 
 .image-wrapper {
   position: relative;
-  border: 2px solid var(--accent-color, #000);
-  inline-size: 375px;
+  border-block: 2px solid var(--accent-color, #000);
+  
   block-size: 375px;
 }
 
@@ -199,24 +201,26 @@
   opacity: 0.5;
   color: #000;
   text-shadow:
-    -1px 0 var( --text-stroke-color, #fff), 
-    0 1px  var( --text-stroke-color, #fff), 
-    1px 0  var( --text-stroke-color, #fff), 
-    0 -1px var( --text-stroke-color, #fff);
+    -1px 0 var(--text-stroke-color, #fff),
+    0 1px var(--text-stroke-color, #fff),
+    1px 0 var(--text-stroke-color, #fff),
+    0 -1px var(--text-stroke-color, #fff);
 }
 
 @supports((text-stroke: 1px #fff) or (-webkit-text-stroke: 1px #fff)) {
-  .img-label{
-      -webkit-text-stroke: 1px  var( --text-stroke-color, #fff);
-      text-stroke: 1px  var( --text-stroke-color, #fff);
-      text-shadow: none;
+  .img-label {
+    -webkit-text-stroke: 1px var(--text-stroke-color, #fff);
+    text-stroke: 1px var(--text-stroke-color, #fff);
+    text-shadow: none;
   }
 }
 
 .card-content {
-  padding-inline-start: 25px;
+  /* padding-inline-start: 27px;
   padding-inline-end: 28.95px;
-  padding-block: 25px;
+  padding-block-start: 23px;
+  padding-block-end: 25px; */
+  padding: 25px;
   display: flex;
   flex-direction: column;
   gap: 27px;
@@ -257,14 +261,14 @@
   inset-block-end: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--accent-color,#000);
+  background-color: var(--accent-color, #000);
   transform: scaleX(0);
 }
 
 .card-button:hover::before {
- transform: scaleX(1);
- transform-origin: left;
- transition: transform 0.5s ease-in-out;
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: transform 0.5s ease-in-out;
 }
 
 .card-button:hover {
@@ -281,8 +285,8 @@
   outline: none;
 }
 
-.card__icon-button:focus-visible {  
-  outline: 2px solid var(--accent-color,#000);
+.card__icon-button:focus-visible {
+  outline: 2px solid var(--accent-color, #000);
   outline-offset: -2px;
   transition: outline 0.3s ease;
 }
@@ -296,7 +300,7 @@
 }
 
 .card__icon-button:hover .core {
-  fill: var(--accent-color,#000);
+  fill: var(--accent-color, #000);
   transition: fill 0.3s;
 }
 
@@ -306,7 +310,7 @@
 }
 
 .card__icon-button:hover .main-body {
-  fill: var(--accent-color,#000);
+  fill: var(--accent-color, #000);
   transition: fill 0.3s 0.05s;
 }
 
@@ -317,36 +321,37 @@
 
 .card__icon-button:active .main-body,
 .card__icon-button:active .core {
-  fill: var( --color-icon-body, #ff0000);
+  fill: var(--color-icon-body, #ff0000);
   transition: fill 0.3s;
 }
 
 .like-icon.is-liked .core,
-.like-icon.is-liked .main-body  {
- fill: var(--color-icon-body,#ff0000);
- transition: fill 0.3s;
+.like-icon.is-liked .main-body {
+  fill: var(--color-icon-body, #ff0000);
+  transition: fill 0.3s;
 }
 
 .like-icon.is-liked .contour {
- fill: var(--color-icon-body,#ff0000);
- transition: fill 0.3s 0.06s;
+  fill: var(--color-icon-body, #ff0000);
+  transition: fill 0.3s 0.06s;
 }
 
 .like-icon.is-liked .heart {
   animation: icon-scale 0.3s ease-in 0.1s;
   transform-origin: center;
- }
-
-@keyframes icon-scale {
- from {
-  scale: 1;
- }
- to {
-  scale: 1.5;
- }
 }
 
-.like-icon.is-liked .sparks{
+@keyframes icon-scale {
+  from {
+    scale: 1;
+  }
+
+  to {
+    scale: 1.5;
+  }
+}
+
+.like-icon.is-liked .sparks {
   animation: sparks 0.3s ease-in 0.3s;
 }
 
@@ -354,56 +359,58 @@
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
 }
 
 .like-icon .contour {
-  fill: var(--accent-color,#000);
+  fill: var(--accent-color, #000);
   transition: fill 0.1s linear;
- }
+}
 
- .footer {
+.footer {
   background-color: var(--bg-color, #fff);
   margin-top: 54px;
   font-size: 14px;
   line-height: 90%;
- }
+}
 
- .button-footer {
+.button-footer {
   display: flex;
   gap: 8px;
   align-items: center;
   padding: 18.5px 21px 19px;
- }
+}
 
- @media (width <= 375px) {
+@media (width <=375px) {
   .button-footer {
     flex-direction: column;
     padding: 15px 20.5px 19.5px;
-   }
- }
+  }
+}
 
- .floppy {
+.floppy {
   inline-size: 21px;
   block-size: 21px;
   color: var(--mix-blend-color, #fff);
   mix-blend-mode: difference;
- }
+}
 
- @media (width <= 375px) {
+@media (width <=375px) {
   .floppy {
     inline-size: 28px;
     block-size: 28px;
-   }
- }
+  }
+}
 
- .dialog {
+.dialog {
   text-transform: uppercase;
- }
+}
 
- .dialog.dialog:opened {
-   display: flex;
-   flex-direction: column;
- }
+.dialog.dialog:opened {
+  display: flex;
+  flex-direction: column;
+}
+
