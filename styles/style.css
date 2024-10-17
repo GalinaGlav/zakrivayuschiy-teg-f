@@ -194,8 +194,7 @@
   font-family: var(--accent-font-family, PressStart);
   position: absolute;
   inset-inline-end: 11px;
-  inset-block-start: 21px;
-  text-transform: uppercase;
+  inset-block-start: 25px;
   mix-blend-mode: hard-light;
   font-size: 14px;
   opacity: 0.5;
@@ -205,6 +204,7 @@
     0 1px var(--text-stroke-color, #fff),
     1px 0 var(--text-stroke-color, #fff),
     0 -1px var(--text-stroke-color, #fff);
+    z-index: 1;
 }
 
 @supports((text-stroke: 1px #fff) or (-webkit-text-stroke: 1px #fff)) {
@@ -215,11 +215,35 @@
   }
 }
 
+.img-filter-grayscale {
+  filter: grayscale(0.7);
+}
+
+.img-filter_saturate {
+  filter:saturate(250%);
+}
+
+.img-filter_hue-rotate {
+  filter: hue-rotate(30deg);
+}
+
+.img-filter_invert {
+  filter: invert(0.8);
+}
+
+.img-filter_sepia {
+  filter: sepia(90%);
+}
+
+.img-filter_blur {
+  filter: blur(10px);
+}
+
+.img-filter_mix {
+  filter: hue-rotate(90deg) contrast(0.5);
+}
+
 .card-content {
-  /* padding-inline-start: 27px;
-  padding-inline-end: 28.95px;
-  padding-block-start: 23px;
-  padding-block-end: 25px; */
   padding: 25px;
   display: flex;
   flex-direction: column;
@@ -379,7 +403,7 @@
 
 .button-footer {
   display: flex;
-  gap: 8px;
+  gap: 5px;
   align-items: center;
   padding: 18.5px 21px 19px;
 }
@@ -387,7 +411,7 @@
 @media (width <=375px) {
   .button-footer {
     flex-direction: column;
-    padding: 15px 20.5px 19.5px;
+    padding: 12px 20.5px 10px;
   }
 }
 
