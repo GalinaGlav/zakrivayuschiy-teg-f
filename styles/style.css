@@ -21,7 +21,10 @@
   font-weight: var(--font-weight-text, 400);
   background-color: var(--bg-color, #fff);
   color: var(--accent-color, #000);
-  background-image: var(--bg-image-gradient);
+  background-image:
+    repeating-linear-gradient(to right, var(--color-gradient-start) 0 2px, var(--color-gradient-end)  2px 4px),
+    repeating-linear-gradient(to bottom, var(--color-gradient-start) 0 2px, var(--color-gradient-end) 2px 4px),
+    linear-gradient(var(--color-gradient-vertical-start) 0.01% , var(--color-gradient-vertical-end) 100%);
   background-size: cover;
   background-attachment: fixed;
   font-size: 18px;

@@ -13,12 +13,12 @@
     --accent-color: #000;
     --text-stroke-color: #fff;
     --button-color: #fff;
-    --bg-image-gradient: 
-    repeating-linear-gradient(to right, #d3d3d3 0 2px, rgba(0,0,0,0)  2px 4px),
-    repeating-linear-gradient(to bottom, #d3d3d3 0 2px, rgba(0,0,0,0)  2px 4px),
-    linear-gradient(#e7e7e7 0.01% , #1a1a1a 100%);
     --icon-accent-color: #000;
     --mix-blend-color: #fff;
+    --color-gradient-start:#d3d3d3;
+    --color-gradient-end:rgba(0,0,0,0);
+    --color-gradient-vertical-start:#e7e7e7;
+    --color-gradient-vertical-end: #1a1a1a;
 
 }
 
@@ -31,12 +31,12 @@
     --accent-color: #00CC14;
     --text-stroke-color: #00CC14;
     --button-color: #00CC14;
-    --bg-image-gradient: 
-    repeating-linear-gradient(to right, #000 0 2px, rgba(0,0,0,0) 2px 4px),
-    repeating-linear-gradient(to bottom, #000 0 2px, rgba(0,0,0,0) 2px 4px),
-    linear-gradient(#007f0c, #004306);
     --icon-accent-color: #00CC14;
     --mix-blend-color: #00CC14;
+    --color-gradient-start:#000 ;
+    --color-gradient-end:rgba(0,0,0,0);
+    --color-gradient-vertical-start:#007f0c;
+    --color-gradient-vertical-end: #004306;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -49,12 +49,12 @@
         --accent-color: #00CC14;
         --text-stroke-color: #00CC14;
         --button-color: #00CC14;
-        --bg-image-gradient: 
-        repeating-linear-gradient(to right, #000 0 2px, rgba(0,0,0,0) 2px 4px),
-        repeating-linear-gradient(to bottom, #000 0 2px, rgba(0,0,0,0) 2px 4px),
-        linear-gradient(#007f0c, #004306);
         --icon-accent-color: #00CC14;
         --mix-blend-color: #00CC14;
+        --color-gradient-start:#000 ;
+        --color-gradient-end:rgba(0,0,0,0);
+        --color-gradient-vertical-start:#007f0c;
+        --color-gradient-vertical-end: #004306;
     }
     
 }
