@@ -156,20 +156,33 @@
   background-color: var(--bg-color, #fff);
   display: flex;
   flex-direction: column;
-  gap: 50px;
   justify-content: center;
   align-items: center;
+}
+
+.content-card-list-item:not(:nth-of-type(3), :last-of-type) {
+  margin-bottom: 50px;
+}
+
+.content-card-list-item:nth-of-type(4) {
+  margin-bottom: 67px;
+}
+
+.content-card-list-item:nth-of-type(3) {
+  margin-bottom: 33px;
 }
 
 .card-title {
   font-size: 18px;
   font-weight: var(--font-weight-title, 700);
   padding: 4px 10px;
+  line-height: 22px;
 }
+
 
 @media (width >=768px) {
   .card-title {
-    padding: 3px 10px;
+    padding: 4px 10px;
   }
 }
 
@@ -180,20 +193,23 @@
 .image-wrapper {
   position: relative;
   border-block: 2px solid var(--accent-color, #000);
-  
-  block-size: 375px;
+  line-height: 0;
+  max-block-size: 696px;
 }
+
 
 .card-image {
   inline-size: 100%;
+  block-size: 100%;
   object-fit: cover;
   object-position: center;
 }
 
+
 .img-label {
   font-family: var(--accent-font-family, PressStart);
   position: absolute;
-  inset-inline-end: 11px;
+  inset-inline-end: 13px;
   inset-block-start: 25px;
   mix-blend-mode: hard-light;
   font-size: 14px;
@@ -213,6 +229,13 @@
     text-stroke: 1px var(--text-stroke-color, #fff);
     text-shadow: none;
   }
+}
+
+@media (width >= 1440px) {
+  .img-label {
+    inset-inline-end: 25px;
+    inset-block-start: 33px;
+}
 }
 
 .img-filter-grayscale {
@@ -258,6 +281,11 @@
   max-block-size: 38px;
 }
 
+/* .button {
+  border: 2px solid var(--accent-color, #000);
+  font-size: 14px;
+  font-family: var(--accent-font-family);
+} */
 
 .card-button {
   min-inline-size: 130px;
@@ -429,21 +457,32 @@
     block-size: 28px;
   }
 }
-
 .modal {
   text-transform: uppercase;
   font-family: var(--accent-font-family);
   font-weight: var(--font-weight-text, 400);
   color: var(--accent-color, #000);
+  background-color: var(--bg-color, #fff);
   font-size: 14px;
   line-height: 150%;
   padding: 30px 40px;
   border: 2px solid  var(--accent-color);
-  /* inline-size: clamp(21.313rem, 1.127vw + 21.048rem, 22.063rem); */
+  max-inline-size: 341px;
+}
+
+@media (width >= 1440px) {
+  .modal {
+    max-inline-size: 353px;
+    padding: 30px;
+  }
+}
+
+.modal:has([open]) {
   display: flex;
   flex-direction: column;
-  gap: 30px;
 }
+
+
 
 .modal-floppy {
   inline-size: 39px;
@@ -463,6 +502,7 @@
   border: 2px solid var(--accent-color, #000);
   inline-size: 100%;
   padding-block: 12.5px;
+  margin-block-start: 30px;
 
 }
 
