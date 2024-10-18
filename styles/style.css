@@ -258,6 +258,7 @@
   max-block-size: 38px;
 }
 
+
 .card-button {
   min-inline-size: 130px;
   border: 2px solid var(--accent-color, #000);
@@ -429,12 +430,43 @@
   }
 }
 
-.dialog {
+.modal {
   text-transform: uppercase;
-}
-
-.dialog.dialog:opened {
+  font-family: var(--accent-font-family);
+  font-weight: var(--font-weight-text, 400);
+  color: var(--accent-color, #000);
+  font-size: 14px;
+  line-height: 150%;
+  padding: 30px 40px;
+  border: 2px solid  var(--accent-color);
+  /* inline-size: clamp(21.313rem, 1.127vw + 21.048rem, 22.063rem); */
   display: flex;
   flex-direction: column;
+  gap: 30px;
 }
 
+.modal-floppy {
+  inline-size: 39px;
+  block-size: 39px;
+  flex-shrink: 0;
+
+}
+
+.modal-content {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  gap:20px;
+  align-items: center;
+}
+
+.button-modal {
+  border: 2px solid var(--accent-color, #000);
+  inline-size: 100%;
+  padding-block: 12.5px;
+
+}
+
+.modal::backdrop {
+  background-color: #000;
+  opacity: 0.75;
+}

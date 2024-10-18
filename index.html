@@ -170,7 +170,7 @@
           <article class="card">
             <h2 class="card-title">1 спринт: А если не получится?</h2>
               <div class="image-wrapper">
-                <p class="img-label">&lt;CSS&gt;</p>
+                <p class="img-label ">&lt;CSS&gt;</p>
               <img class="card-image img-filter_saturate" src="./svg/image.svg">
               </div>
             <div class="card-content">
@@ -523,14 +523,14 @@
     </button>
     </footer>
 
-    <dialog aria-label="Модальное окно" id="mydialog">
-      <div>
-        <svg viewBox="0 0 21 21" class="floppy">
+    <dialog aria-label="Модальное окно" id="mydialog" class="modal">
+      <div class="modal-content">
+        <svg viewBox="0 0 21 21" class="floppy modal-floppy">
           <use href="./svg/floppy (1).svg#floppy">
         </svg>
-        <p>Вставьте дискету, чтобы продолжить</p>
+        <p class="modal-content_text">Вставьте дискету, чтобы продолжить</p>
       </div>
-      <button>
+      <button class="button-modal" type="button">
         <span>Ок</span>
       </button>
     </dialog>
