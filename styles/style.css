@@ -18,7 +18,7 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: var(--main-font-family, sans-serif);
-  font-weight: var(--font-weight-text, 400);
+  font-variation-settings: var(--font-weight-text, 400);
   background-color: var(--bg-color, #fff);
   color: var(--accent-color, #000);
   background-image:
