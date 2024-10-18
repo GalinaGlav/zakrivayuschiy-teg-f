@@ -21,7 +21,6 @@
     --color-gradient-end:rgba(0,0,0,0);
     --color-gradient-vertical-start:#e7e7e7;
     --color-gradient-vertical-end: #1a1a1a;
-
 }
 
 :root.theme-dark {
