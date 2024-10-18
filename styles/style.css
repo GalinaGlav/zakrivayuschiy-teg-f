@@ -443,13 +443,14 @@
   display: flex;
   gap: 5px;
   align-items: center;
-  padding: 18.5px 21px 19px;
+  padding-block: 15px;
+  padding-inline: 21px 19px;
 }
 
 @media (width <=375px) {
   .button-footer {
     flex-direction: column;
-    padding: 12px 20.5px 10px;
+    padding-inline: 20.5px;
   }
 }
 
