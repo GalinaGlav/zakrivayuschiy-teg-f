@@ -6,15 +6,17 @@
 */
 :root.theme-light {
     --accent-font-family: PressStart;
+    --accent-font-family: PressStart;
     --main-font-family: Inter-Variable;
     --font-weight-title: 700;
     --font-weight-text: 400;
-    --bg-color:#FFFFFF;
+    --bg-color:#fff;
     --accent-color: #000;
     --text-stroke-color: #fff;
     --button-color: #fff;
+    --inline-size: clamp(375px, 100%, 700px);
     --icon-accent-color: #000;
-    --mix-blend-color: #fff;
+    --color-icon-body: #ff0000;
     --color-gradient-start:#d3d3d3;
     --color-gradient-end:rgba(0,0,0,0);
     --color-gradient-vertical-start:#e7e7e7;
@@ -31,6 +33,7 @@
     --accent-color: #00CC14;
     --text-stroke-color: #00CC14;
     --button-color: #00CC14;
+    --inline-size: clamp(375px, 100%, 700px);
     --icon-accent-color: #00CC14;
     --mix-blend-color: #00CC14;
     --color-gradient-start:#000 ;
@@ -49,6 +52,7 @@
         --accent-color: #00CC14;
         --text-stroke-color: #00CC14;
         --button-color: #00CC14;
+        --inline-size: clamp(375px, 100%, 700px);
         --icon-accent-color: #00CC14;
         --mix-blend-color: #00CC14;
         --color-gradient-start:#000 ;
@@ -56,5 +60,4 @@
         --color-gradient-vertical-start:#007f0c;
         --color-gradient-vertical-end: #004306;
     }
-    
 }
